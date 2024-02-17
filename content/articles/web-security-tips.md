@@ -3,6 +3,7 @@ title: Essential Web Security Tips
 description: Learn how to protect your web applications from cyber threats
 img: scc.png
 alt: Web Security Tips
+reading: 5
 author:
   name: Benjamin
   bio: All about Benjamin

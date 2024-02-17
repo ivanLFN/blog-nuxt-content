@@ -3,6 +3,7 @@ title: Advantages of Cloud Computing
 description: Explore the benefits of migrating to the cloud
 img: scc.png
 alt: Cloud Computing Benefits
+reading: 5
 author:
   name: Benjamin
   bio: All about Benjamin
