@@ -26,20 +26,17 @@ export default {
 
 <style scoped>
 .wrapper {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
 
-.footer {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+.content {
+  flex: 1;
 }
 
-@media only screen and (max-width: 600px) {
-  .footer {
-    position: relative;
-  }
+.footer {
+  flex-shrink: 0;
 }
+
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="container-lg py-2">
+  <div class="default-container py-2">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a

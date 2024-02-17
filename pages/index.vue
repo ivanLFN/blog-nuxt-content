@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>page body</h1> 
+    <h1>page body</h1>
   </div>
 </template>
 
@@ -9,3 +9,6 @@ export default {
   layout: 'Default'
 }
 </script>
+
+<style scoped>
+</style>
