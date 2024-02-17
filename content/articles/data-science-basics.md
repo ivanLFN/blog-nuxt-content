@@ -3,6 +3,7 @@ title: Introduction to Data Science
 description: Understanding the fundamentals of data science and its applications
 img: scc.png
 alt: Data Science Basics
+reading: 5
 author:
   name: Benjamin
   bio: All about Benjamin

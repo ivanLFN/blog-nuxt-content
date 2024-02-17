@@ -3,6 +3,7 @@ title: Understanding Blockchain Technology
 description: Learn about the underlying principles of blockchain and its applications
 img: scc.png
 alt: Blockchain Technology
+reading: 5
 author:
   name: Benjamin
   bio: All about Benjamin
