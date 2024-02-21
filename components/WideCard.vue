@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="border: 1px solid blue;">
     <client-only>
       <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
         <img :src="article.img" />
