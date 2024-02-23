@@ -6,7 +6,7 @@
         :key="article.slug"
         :class="getCardClass(index)"
       >
-        <component :is="getComponent(index)" :article="article">
+        <component :is="getComponent(index)" :article="article" class="mt-5 default-card">
         </component>
       </div>
     </div>
@@ -48,8 +48,23 @@ export default {
       return this.col6Indexes.includes(index);
     },
     getCardClass(index) {
-      return this.isWideCard(index) ? 'col-6' : 'col-3';
+      return this.isWideCard(index) ? 'col-12 col-md-6' : 'col-12 col-md-3';
     }
   }
 }
 </script>
+
+<style scoped>
+
+.default-card {
+  height: 500px;
+  border: 2px solid #efefef;
+}
+
+@media only screen and (max-width: 600px) {
+  .default-card {
+    height: 350px;
+  }
+}
+
+</style>
