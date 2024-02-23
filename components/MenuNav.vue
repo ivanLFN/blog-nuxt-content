@@ -1,6 +1,6 @@
 <template>
-  <div class="default-container py-2">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="default-container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-0">
       <div class="container-fluid">
         <a
           class="navbar-brand"
@@ -29,7 +29,7 @@
         </a>
         <div
           id="navbarSupportedContent"
-          class="collapse navbar-collapse"
+          class="collapse navbar-collapse link-positon"
         >
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item pr-md-3">

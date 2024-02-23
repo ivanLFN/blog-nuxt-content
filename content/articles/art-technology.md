@@ -1,7 +1,7 @@
 ---
 title: Exploring the Intersection of Art and Technology
 description: Discover how artists are leveraging technology to create innovative works of art.
-img: scc.png
+img: art_tecnology.png
 alt: Art and Technology
 reading: 6
 author:

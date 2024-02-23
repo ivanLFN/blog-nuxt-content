@@ -10,7 +10,6 @@
         </div>
       </NuxtLink>
     </client-only>
-    
   </div>
 </template>
 

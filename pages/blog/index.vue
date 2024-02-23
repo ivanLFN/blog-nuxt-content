@@ -27,7 +27,7 @@ export default {
   layout: 'Default',
   async asyncData({ $content, params }) {
     const articles = await $content('articles', params.slug)
-      .only(['title', 'description', 'img', 'slug', 'author'])
+      .only(['title', 'description', 'img', 'slug', 'author', 'reading', 'createdAt'])
       .sortBy('createdAt', 'asc')
       .fetch()
 
@@ -59,6 +59,7 @@ export default {
 .default-card {
   height: 500px;
   border: 2px solid #efefef;
+  border-radius: 5px;
 }
 
 @media only screen and (max-width: 600px) {
