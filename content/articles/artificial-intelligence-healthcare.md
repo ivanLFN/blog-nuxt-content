@@ -1,7 +1,7 @@
 ---
-title: The Rise of Artificial Intelligence in Healthcare
+title: The Rise of AI in Healthcare
 description: Explore how AI is transforming the healthcare industry and improving patient outcomes.
-img: scc.png
+img: ai_medical.png
 alt: Artificial Intelligence in Healthcare
 reading: 8
 author:

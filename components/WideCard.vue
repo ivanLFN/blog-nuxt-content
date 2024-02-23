@@ -1,9 +1,9 @@
 <template>
-  <div>
+  <div class="overflow-hidden">
     <client-only>
       <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }" class="nuxt-link-wrapper">
         <div class="row nuxt-link-content">
-          <div class="col-7">
+          <div class="col-11 col-md-7">
             <div class="px-5 pt-5">
               <p class="created-at-style">{{ formatDate(article.createdAt) }}</p>
               <div>
@@ -14,7 +14,7 @@
               <p class="reading-style">READ {{ article.reading }} MIN</p>
             </div>
           </div>
-          <div class="col-5 overflow-hidden">
+          <div class="col-1 col-md-5 overflow-hidden">
             <img :src="`/articles/${article.img}`" class="card-image" />
           </div>
         </div>
@@ -43,7 +43,7 @@ export default {
 <style scoped>
 
 .nuxt-link-wrapper .card-image {
-  transition: transform 1s ease; /* Добавляем переход */
+  transition: transform 1s ease;
 }
 
 .nuxt-link-wrapper:hover .card-image {
@@ -95,5 +95,11 @@ export default {
 
 .article-title {
   margin-top: 8rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .article-title {
+    margin-top: 1rem;
+  }
 }
 </style>
