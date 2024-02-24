@@ -9,9 +9,8 @@ author:
   bio: All about Benjamin
   image: https://images.unsplash.com/.....
 tags: 
-  - data_science
-  - machine_learning
-  - analytics
+  - tag_5
+  - tag_7
 ---
 
 ## What is Data Science?

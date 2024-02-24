@@ -9,8 +9,7 @@ author:
   bio: All about Benjamin
   image: https://images.unsplash.com/.....
 tags: 
-  - cloud_computing
-  - infrastructure
+  - tag_5
 ---
 
 ## What is Cloud Computing?

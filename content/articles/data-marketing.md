@@ -9,8 +9,7 @@ author:
   bio: Uncovering insights through data analysis
   image: https://images.unsplash.com/.....
 tags:
-  - marketing
-  - data-analysis
+  - tag_1
 ---
 
 ## Leveraging Big Data

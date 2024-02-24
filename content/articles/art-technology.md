@@ -9,8 +9,8 @@ author:
   bio: Exploring the fusion of art and technology
   image: https://images.unsplash.com/.....
 tags:
-  - art
-  - technology
+  - tag_1
+  - tag_2
 ---
 
 ## The Convergence of Art and Technology

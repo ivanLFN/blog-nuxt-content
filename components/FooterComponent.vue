@@ -217,6 +217,7 @@
   font-size: 1.2rem;
   font-weight: 300;
   padding-top: 5rem;
+  margin-top: 8rem;
 }
 
 @media only screen and (max-width: 600px) {
