@@ -6,13 +6,19 @@
       </div>
     </div>
     <div class="row d-flex flex-wrap tags align-items-center">
-      <nuxt-link :to="{ path: `/blog/` }" class="tag-active col-auto ml-3">ALL</nuxt-link>
+      <nuxt-link :to="{ path: `/blog/` }" class="tag col-auto ml-3" :class="{ 'tag-active': !currentTag }">ALL</nuxt-link>
       <div
         v-for="(tag) of tags"
         :key="tag"
         class="col-auto" 
         >
-          <nuxt-link :to="{ path: `/blog/tag/${ tag }`, query: { tagsArray: tags } }" class="tag m-0">{{ tag.toUpperCase() }}</nuxt-link>
+          <nuxt-link 
+            :to="{ path: `/blog/tag/${ tag }`, query: { tagsArray: tags } }"
+            class="tag"
+            v-bind:class="{ 'tag-active': currentTag && currentTag === tag }"
+          >
+            {{ tag.toUpperCase() }}
+          </nuxt-link>
       </div>
     </div>
     <div class="row">
@@ -31,25 +37,30 @@
 <script>
 import WideCard from '@/components/WideCard.vue';
 import ThinCard from '@/components/ThinCard.vue';
-
 export default {
-  name: 'Index',
   components: {
     WideCard,
     ThinCard
   },
   layout: 'Default',
-  async asyncData({ $content, params, store }) {
-    const articles = await $content('articles', params.slug)
-      .only(['title', 'description', 'img', 'slug', 'author', 'reading', 'createdAt', 'tags'])
+  async asyncData({ $content, params, route }) {
+    const articles = await $content('articles')
+      .where({
+        'tags': {
+          $regex: params.tag,
+          $options: 'i'
+        }
+      })
       .sortBy('createdAt', 'asc')
       .fetch()
 
-      const tags = Array.from(new Set(articles.flatMap(article => article.tags)));
+      const tags = route.query.tagsArray || [];
+      const currentTag = params.tag || null;
 
     return {
       articles,
-      tags
+      tags,
+      currentTag
     }
   },
   data() {
@@ -72,10 +83,10 @@ export default {
 </script>
 
 <style scoped>
-
 .tag-active {
-  background-color: #7B4DFF;
-  color: white;
+  background-color: #7B4DFF !important;
+  color: white !important;
+  border: 2px solid #7B4DFF !important;
   font-weight: 600;
   padding: 5px 15px;
   font-size: 0.95rem;
@@ -136,5 +147,4 @@ export default {
     margin-bottom: 1rem;
   }
 }
-
 </style>

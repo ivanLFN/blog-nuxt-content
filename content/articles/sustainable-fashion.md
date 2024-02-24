@@ -9,8 +9,7 @@ author:
   bio: Advocating for sustainable fashion practices
   image: https://images.unsplash.com/.....
 tags:
-  - fashion
-  - sustainability
+  - tag_3
 ---
 
 ## Embracing Sustainable Practices

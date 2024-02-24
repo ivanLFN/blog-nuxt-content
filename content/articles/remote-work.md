@@ -9,8 +9,7 @@ author:
   bio: Navigating the remote work landscape
   image: https://images.unsplash.com/.....
 tags:
-  - remote-work
-  - productivity
+  - tag_7
 ---
 
 ## The Rise of Remote Work

@@ -9,8 +9,7 @@ author:
   bio: Your guide to the future of healthcare
   image: https://images.unsplash.com/.....
 tags: 
-  - artificial-intelligence
-  - healthcare
+  - tag_3
 ---
 
 ## Introduction to AI in Healthcare

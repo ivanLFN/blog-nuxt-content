@@ -9,8 +9,8 @@ author:
   bio: Navigating the world of smart home innovations
   image: https://images.unsplash.com/.....
 tags:
-  - smart-home
-  - technology
+  - tag_1
+  - tag_8
 ---
 
 ## Revolutionizing Home Automation

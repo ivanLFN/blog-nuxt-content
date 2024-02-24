@@ -10,7 +10,6 @@
           <div>
             <div class="article-title">{{ article.title }}</div>
           </div>
-          <!-- <p>{{ article.description }}</p> -->
         </div>
       </NuxtLink>
     </client-only>

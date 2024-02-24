@@ -9,8 +9,8 @@ author:
   bio: All about Benjamin
   image: https://images.unsplash.com/.....
 tags: 
-  - blockchain
-  - cryptocurrency
+  - tag_3
+  - tag_4
 ---
 
 ## Introduction to Blockchain
