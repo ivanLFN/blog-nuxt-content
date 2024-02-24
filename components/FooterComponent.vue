@@ -4,105 +4,66 @@
       <div class="default-container">
         <div class="row justify-content-center">
           <div class="col-md-3 col-sm-12 mb-5 mb-md-0">
-            <div class="footer-header">
-                About
-              </div>
-              <div class="footer-slogan mt-3">
-                Innovation for your success. Together in the future. We will implement your ideas. Technologies for growing your business. Trust us with your future and we will make it better.
-              </div>
-              <div class="general-info mt-3">
-                <span class="general-info-header">Email:</span> info@jstemplate.net <br>
-                <span class="general-info-header">Phone:</span> 880 123 456 789
-              </div>
+            <div class="footer-header">About</div>
+            <div class="footer-slogan mt-3">
+              Innovation for your success. Together in the future. We will
+              implement your ideas. Technologies for growing your business.
+              Trust us with your future and we will make it better.
+            </div>
+            <div class="general-info mt-3">
+              <span class="general-info-header">Email:</span>
+              info@jstemplate.net <br />
+              <span class="general-info-header">Phone:</span> 880 123 456 789
+            </div>
           </div>
           <div class="col-md-5 col-sm-12 mb-5 mb-md-0">
             <div class="d-flex justify-content-center text-center">
               <div class="offset-md-2 col-4">
                 <div class="d-flex flex-column align-items-start">
-                  <div class="footer-header">
-                    Quick Link
-                  </div>
+                  <div class="footer-header">Quick Link</div>
                   <ul class="pl-0 mt-3 text-start">
                     <li>
-                      <a
-                        href="#"
-                        class="footer-link"
-                      >Home</a>
+                      <a href="#" class="footer-link">Home</a>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="footer-link"
-                      >About</a>
+                      <a href="#" class="footer-link">About</a>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="footer-link"
-                      >Blog</a>
+                      <a href="#" class="footer-link">Blog</a>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="footer-link"
-                      >Archived</a>
+                      <a href="#" class="footer-link">Archived</a>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="footer-link"
-                      >Contact</a>
+                      <a href="#" class="footer-link">Contact</a>
                     </li>
                   </ul>
                 </div>
               </div>
               <div class="col-4">
                 <div class="d-flex flex-column align-items-start">
-                  <div class="footer-header">
-                    Category
-                  </div>
+                  <div class="footer-header">Category</div>
                   <ul class="pl-0 mt-3 text-start">
                     <li>
-                      <a
-                        href="#"
-                        class="footer-link"
-                      >For customer</a>
+                      <a href="#" class="footer-link">For customer</a>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="footer-link"
-                      >Business</a>
+                      <a href="#" class="footer-link">Business</a>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="footer-link"
-                      >For manager</a>
+                      <a href="#" class="footer-link">For manager</a>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="footer-link"
-                      >Web</a>
+                      <a href="#" class="footer-link">Web</a>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="footer-link"
-                      >Mobile</a>
+                      <a href="#" class="footer-link">Mobile</a>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="footer-link"
-                      >UI/UX</a>
+                      <a href="#" class="footer-link">UI/UX</a>
                     </li>
                     <li>
-                      <a
-                        href="#"
-                        class="footer-link"
-                      >Checklists</a>
+                      <a href="#" class="footer-link">Checklists</a>
                     </li>
                   </ul>
                 </div>
@@ -114,7 +75,7 @@
               <div class="text-center">
                 <div
                   class="pt-4"
-                  style="font-size: 1.5rem; font-weight: 450; color: #181A2A;"
+                  style="font-size: 1.5rem; font-weight: 450; color: #181a2a"
                 >
                   Weekly Newsletter
                 </div>
@@ -123,10 +84,7 @@
                 </div>
               </div>
               <div>
-                <form
-                  action="/subscribe"
-                  method="post"
-                >
+                <form action="/subscribe" method="post">
                   <div class="row mt-4">
                     <div class="form-input d-flex">
                       <input
@@ -136,17 +94,16 @@
                         type="email"
                         name="email"
                         required
-                      >
+                      />
                       <img
                         class="form-img"
                         src="/images/letter-50.png"
                         alt="letter"
-                      >
+                      />
                     </div>
-                    <a
-                      class="submit-btn text-center mt-2 mb-4"
-                      type="submit"
-                    >Subscribe</a>
+                    <a class="submit-btn text-center mt-2 mb-4" type="submit"
+                      >Subscribe</a
+                    >
                   </div>
                 </form>
               </div>
@@ -157,30 +114,25 @@
           <div class="row mt-md-5 mt-3">
             <div class="d-flex flex-column flex-md-row align-items-center">
               <div class="col-12 col-md-4">
-                <div style="color: #181A2A">
+                <div style="color: #181a2a">
                   <img
                     src="https://img.icons8.com/color/96/bootstrap--v2.png"
                     alt="logo"
-                  >
-                  <div style="font-weight: 500; font-size: 1.5rem;">
+                  />
+                  <div style="font-weight: 500; font-size: 1.5rem">
                     Bootstrap
                   </div>
                   <div>© JS Template 2024. All Rights Reserved.</div>
                 </div>
               </div>
               <div class="col-12 col-md-8 text-md-end mt-md-0 mt-4">
-                <a
-                  class="footer-link px-md-3 px-1  bottom-link"
-                  href="#"
-                >Terms of Use</a>
-                <a
-                  class="footer-link px-md-3 px-1 bottom-link"
-                  href="#"
-                >Privacy Policy</a>
-                <a
-                  class="footer-link px-md-3 px-1"
-                  href="#"
-                >Cookie Policy</a>
+                <a class="footer-link px-md-3 px-1 bottom-link" href="#"
+                  >Terms of Use</a
+                >
+                <a class="footer-link px-md-3 px-1 bottom-link" href="#"
+                  >Privacy Policy</a
+                >
+                <a class="footer-link px-md-3 px-1" href="#">Cookie Policy</a>
               </div>
             </div>
           </div>
@@ -191,29 +143,28 @@
 </template>
 
 <style scoped>
-
 .footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #F6F6F7 !important;
+  background-color: #f6f6f7 !important;
 }
 
 .bottom-link {
-  border-right: 1px solid #DCDDDF;
+  border-right: 1px solid #dcdddf;
 }
 
 .bottom-part {
-  border-top: 1px solid #DCDDDF;
+  border-top: 1px solid #dcdddf;
   margin-top: 5rem;
 }
 
 .footer-link {
   text-decoration: none;
-  color: #3B3C4A !important;
+  color: #3b3c4a !important;
 }
 .general-footer {
-  background-color: #F6F6F7;
+  background-color: #f6f6f7;
   font-size: 1.2rem;
   font-weight: 300;
   padding-top: 5rem;
@@ -230,40 +181,41 @@
 }
 
 .general-info-header {
-  color: #181A2A;
+  color: #181a2a;
   font-weight: bolder;
 }
 
 .general-info {
-  color: #3B3C4A;
+  color: #3b3c4a;
 }
 
 .footer-slogan {
-  color: #696A75;
+  color: #696a75;
   font-weight: 250;
 }
 
 .footer-header {
   font-size: 1.4rem;
-  color: #181A2A;
+  color: #181a2a;
   font-weight: 450;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
   padding: 0;
   margin: 0;
-  color: #3B3C4A;
+  color: #3b3c4a;
   font-weight: 250;
 }
 
 .form-header {
-  color: #696A75;
+  color: #696a75;
 }
 
 .form-input {
   padding: 10px;
-  border: 1px solid #97989F;
+  border: 1px solid #97989f;
   border-radius: 5px;
 }
 
@@ -284,12 +236,11 @@ ul, ol {
 }
 
 .submit-btn {
-  background-color: #7B4DFF;
+  background-color: #7b4dff;
   padding: 10px 0;
   border-radius: 5px;
   color: white;
   text-decoration: none;
   font-weight: 350;
 }
-
 </style>

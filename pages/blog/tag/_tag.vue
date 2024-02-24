@@ -1,24 +1,23 @@
 <template>
   <div class="default-container">
     <div>
-      <div class="page-title">
-        Blog
-      </div>
+      <div class="page-title">Blog</div>
     </div>
     <div class="row d-flex flex-wrap tags align-items-center">
-      <nuxt-link :to="{ path: `/blog/` }" class="tag col-auto ml-3" :class="{ 'tag-active': !currentTag }">ALL</nuxt-link>
-      <div
-        v-for="(tag) of tags"
-        :key="tag"
-        class="col-auto" 
+      <nuxt-link
+        :to="{ path: `/blog/` }"
+        class="tag col-auto ml-3"
+        :class="{ 'tag-active': !currentTag }"
+        >ALL</nuxt-link
+      >
+      <div v-for="tag of tags" :key="tag" class="col-auto">
+        <nuxt-link
+          :to="{ path: `/blog/tag/${tag}`, query: { tagsArray: tags } }"
+          class="tag"
+          :class="{ 'tag-active': currentTag && currentTag === tag }"
         >
-          <nuxt-link 
-            :to="{ path: `/blog/tag/${ tag }`, query: { tagsArray: tags } }"
-            class="tag"
-            v-bind:class="{ 'tag-active': currentTag && currentTag === tag }"
-          >
-            {{ tag.toUpperCase() }}
-          </nuxt-link>
+          {{ tag.toUpperCase() }}
+        </nuxt-link>
       </div>
     </div>
     <div class="row">
@@ -27,7 +26,11 @@
         :key="article.slug"
         :class="getCardClass(index)"
       >
-        <component :is="getComponent(index)" :article="article" class="mt-5 default-card">
+        <component
+          :is="getComponent(index)"
+          :article="article"
+          class="mt-5 default-card"
+        >
         </component>
       </div>
     </div>
@@ -35,58 +38,60 @@
 </template>
 
 <script>
-import WideCard from '@/components/WideCard.vue';
-import ThinCard from '@/components/ThinCard.vue';
+import WideCard from '@/components/WideCard.vue'
+import ThinCard from '@/components/ThinCard.vue'
 export default {
   components: {
     WideCard,
-    ThinCard
+    ThinCard,
   },
   layout: 'Default',
   async asyncData({ $content, params, route }) {
     const articles = await $content('articles')
       .where({
-        'tags': {
+        tags: {
           $regex: params.tag,
-          $options: 'i'
-        }
+          $options: 'i',
+        },
       })
       .sortBy('createdAt', 'asc')
       .fetch()
 
-      const tags = route.query.tagsArray || [];
-      const currentTag = params.tag || null;
+    const tags = route.query.tagsArray || []
+    const currentTag = params.tag || null
 
     return {
       articles,
       tags,
-      currentTag
+      currentTag,
     }
   },
   data() {
     return {
-      col6Indexes: Array.from({ length: 10 }, (_, index) => index === 0 ? 0 : index * 10 - 1)
-    };
+      col6Indexes: Array.from({ length: 10 }, (_, index) =>
+        index === 0 ? 0 : index * 10 - 1
+      ),
+    }
   },
   methods: {
     getComponent(index) {
-      return this.isWideCard(index) ? WideCard : ThinCard;
+      return this.isWideCard(index) ? WideCard : ThinCard
     },
     isWideCard(index) {
-      return this.col6Indexes.includes(index);
+      return this.col6Indexes.includes(index)
     },
     getCardClass(index) {
-      return this.isWideCard(index) ? 'col-12 col-md-6' : 'col-12 col-md-3';
-    }
-  }
+      return this.isWideCard(index) ? 'col-12 col-md-6' : 'col-12 col-md-3'
+    },
+  },
 }
 </script>
 
 <style scoped>
 .tag-active {
-  background-color: #7B4DFF !important;
+  background-color: #7b4dff !important;
   color: white !important;
-  border: 2px solid #7B4DFF !important;
+  border: 2px solid #7b4dff !important;
   font-weight: 600;
   padding: 5px 15px;
   font-size: 0.95rem;
@@ -112,7 +117,6 @@ export default {
   text-decoration: none;
   background-color: rgb(242, 242, 242);
 }
-
 
 .tags {
   margin-top: 4rem;

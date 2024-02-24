@@ -19,8 +19,8 @@ import FooterComponent from '~/components/FooterComponent.vue'
 export default {
   components: {
     MenuNav,
-    FooterComponent
-  }
+    FooterComponent,
+  },
 }
 </script>
 
@@ -38,5 +38,4 @@ export default {
 .footer {
   flex-shrink: 0;
 }
-
 </style>

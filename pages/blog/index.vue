@@ -1,18 +1,18 @@
 <template>
   <div class="default-container">
     <div>
-      <div class="page-title">
-        Blog
-      </div>
+      <div class="page-title">Blog</div>
     </div>
     <div class="row d-flex flex-wrap tags align-items-center">
-      <nuxt-link :to="{ path: `/blog/` }" class="tag-active col-auto ml-3">ALL</nuxt-link>
-      <div
-        v-for="(tag) of tags"
-        :key="tag"
-        class="col-auto" 
+      <nuxt-link :to="{ path: `/blog/` }" class="tag-active col-auto ml-3"
+        >ALL</nuxt-link
+      >
+      <div v-for="tag of tags" :key="tag" class="col-auto">
+        <nuxt-link
+          :to="{ path: `/blog/tag/${tag}`, query: { tagsArray: tags } }"
+          class="tag m-0"
+          >{{ tag.toUpperCase() }}</nuxt-link
         >
-          <nuxt-link :to="{ path: `/blog/tag/${ tag }`, query: { tagsArray: tags } }" class="tag m-0">{{ tag.toUpperCase() }}</nuxt-link>
       </div>
     </div>
     <div class="row">
@@ -21,7 +21,11 @@
         :key="article.slug"
         :class="getCardClass(index)"
       >
-        <component :is="getComponent(index)" :article="article" class="mt-5 default-card">
+        <component
+          :is="getComponent(index)"
+          :article="article"
+          class="mt-5 default-card"
+        >
         </component>
       </div>
     </div>
@@ -29,52 +33,64 @@
 </template>
 
 <script>
-import WideCard from '@/components/WideCard.vue';
-import ThinCard from '@/components/ThinCard.vue';
+import WideCard from '@/components/WideCard.vue'
+import ThinCard from '@/components/ThinCard.vue'
 
 export default {
   name: 'Index',
   components: {
     WideCard,
-    ThinCard
+    ThinCard,
   },
   layout: 'Default',
   async asyncData({ $content, params, store }) {
     const articles = await $content('articles', params.slug)
-      .only(['title', 'description', 'img', 'slug', 'author', 'reading', 'createdAt', 'tags'])
+      .only([
+        'title',
+        'description',
+        'img',
+        'slug',
+        'author',
+        'reading',
+        'createdAt',
+        'tags',
+      ])
       .sortBy('createdAt', 'asc')
       .fetch()
 
-      const tags = Array.from(new Set(articles.flatMap(article => article.tags)));
+    const tags = Array.from(
+      new Set(articles.flatMap((article) => article.tags))
+    )
 
     return {
       articles,
-      tags
+      tags,
     }
   },
   data() {
     return {
-      col6Indexes: Array.from({ length: 10 }, (_, index) => index === 0 ? 0 : index * 10 - 1)
-    };
+      col6Indexes: Array.from({ length: 10 }, (_, index) =>
+        index === 0 ? 0 : index * 10 - 1
+      ),
+    }
   },
   methods: {
     getComponent(index) {
-      return this.isWideCard(index) ? WideCard : ThinCard;
+      return this.isWideCard(index) ? WideCard : ThinCard
     },
     isWideCard(index) {
-      return this.col6Indexes.includes(index);
+      return this.col6Indexes.includes(index)
     },
     getCardClass(index) {
-      return this.isWideCard(index) ? 'col-12 col-md-6' : 'col-12 col-md-3';
-    }
-  }
+      return this.isWideCard(index) ? 'col-12 col-md-6' : 'col-12 col-md-3'
+    },
+  },
 }
 </script>
 
 <style scoped>
-
 .tag-active {
-  background-color: #7B4DFF;
+  background-color: #7b4dff;
   color: white;
   font-weight: 600;
   padding: 5px 15px;
@@ -101,7 +117,6 @@ export default {
   text-decoration: none;
   background-color: rgb(242, 242, 242);
 }
-
 
 .tags {
   margin-top: 4rem;
@@ -136,5 +151,4 @@ export default {
     margin-bottom: 1rem;
   }
 }
-
 </style>

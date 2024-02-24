@@ -8,7 +8,7 @@ author:
   name: Emily
   bio: Your guide to the future of healthcare
   image: https://images.unsplash.com/.....
-tags: 
+tags:
   - tag_3
 ---
 
