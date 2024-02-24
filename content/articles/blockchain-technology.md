@@ -8,7 +8,7 @@ author:
   name: Benjamin
   bio: All about Benjamin
   image: https://images.unsplash.com/.....
-tags: 
+tags:
   - tag_3
   - tag_4
 ---

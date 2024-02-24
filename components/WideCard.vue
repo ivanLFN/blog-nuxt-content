@@ -1,11 +1,16 @@
 <template>
   <div class="overflow-hidden">
     <client-only>
-      <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }" class="nuxt-link-wrapper">
+      <NuxtLink
+        :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+        class="nuxt-link-wrapper"
+      >
         <div class="row nuxt-link-content">
           <div class="col-11 col-md-7">
             <div class="px-5 pt-5">
-              <p class="created-at-style">{{ formatDate(article.createdAt) }}</p>
+              <p class="created-at-style">
+                {{ formatDate(article.createdAt) }}
+              </p>
               <div>
                 <div class="article-title">{{ article.title }}</div>
               </div>
@@ -28,20 +33,19 @@ export default {
   props: {
     article: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
-    }
-  }
+    },
+  },
 }
 </script>
 
 <style scoped>
-
 .nuxt-link-wrapper .card-image {
   transition: transform 1s ease;
 }

@@ -1,7 +1,10 @@
 <template>
   <div>
     <client-only>
-      <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }" class="parent-link nuxt-link-wrapper">
+      <NuxtLink
+        :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+        class="parent-link nuxt-link-wrapper"
+      >
         <div class="img-style">
           <img :src="`/articles/${article.img}`" class="card-image" />
         </div>
@@ -21,20 +24,19 @@ export default {
   props: {
     article: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' }
       return new Date(date).toLocaleDateString('en', options)
-    }
-  }
+    },
+  },
 }
 </script>
 
 <style scoped>
-
 .article-title {
   color: #272727;
   text-decoration: none;
@@ -91,5 +93,4 @@ export default {
   height: 100%;
   object-fit: cover;
 }
-
 </style>

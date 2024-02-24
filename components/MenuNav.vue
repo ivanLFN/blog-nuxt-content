@@ -2,15 +2,12 @@
   <div class="default-container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light px-0">
       <div class="container-fluid">
-        <a
-          class="navbar-brand"
-          href="#"
-        >
+        <a class="navbar-brand" href="#">
           <img
             width="96"
             height="96"
             src="https://img.icons8.com/color/96/bootstrap--v2.png"
-          >
+          />
         </a>
         <a
           class="navbar-toggler"
@@ -21,11 +18,9 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span><img
-            class="menu-icon"
-            src="/images/menu-50.png"
-            alt="menu"
-          ></span>
+          <span
+            ><img class="menu-icon" src="/images/menu-50.png" alt="menu"
+          /></span>
         </a>
         <div
           id="navbarSupportedContent"
@@ -33,25 +28,15 @@
         >
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item pr-md-3">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="#"
-              >Home</a>
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item px-md-3">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="#"
-              >Blog</a>
+              <a class="nav-link active" aria-current="page" href="#">Blog</a>
             </li>
             <li class="nav-item">
-              <a
-                class="nav-link active"
-                aria-current="page"
-                href="#"
-              >Contact</a>
+              <a class="nav-link active" aria-current="page" href="#"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
@@ -82,5 +67,4 @@
   font-size: 1.5rem;
   color: #272727;
 }
-
 </style>
