@@ -20,20 +20,24 @@
         </nuxt-link>
       </div>
     </div>
-    <div class="row">
-      <div
-        v-for="(article, index) of articles"
-        :key="article.slug"
-        :class="getCardClass(index)"
-      >
-        <component
-          :is="getComponent(index)"
-          :article="article"
-          class="mt-5 default-card"
-        >
-        </component>
+    <transition name="bounce">
+      <div v-if="isMounted">
+        <div class="row">
+          <div
+            v-for="(article, index) of articles"
+            :key="article.slug"
+            :class="getCardClass(index)"
+          >
+            <component
+              :is="getComponent(index)"
+              :article="article"
+              class="mt-5 default-card"
+            >
+            </component>
+          </div>
+        </div>
       </div>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -71,7 +75,11 @@ export default {
       col6Indexes: Array.from({ length: 10 }, (_, index) =>
         index === 0 ? 0 : index * 10 - 1
       ),
+      isMounted: false
     }
+  },
+  mounted () {
+    this.isMounted = true;
   },
   methods: {
     getComponent(index) {
@@ -149,6 +157,24 @@ export default {
   .tags {
     margin-top: 2rem;
     margin-bottom: 1rem;
+  }
+}
+
+.bounce-enter-active {
+  animation: bounce-in 1.3s;
+}
+.bounce-leave-active {
+  animation: bounce-in 1.3s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 </style>
