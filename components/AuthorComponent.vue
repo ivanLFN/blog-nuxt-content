@@ -1,19 +1,17 @@
 <template>
-  <div>
-    <img :src="author.image" />
-    <div>
-      <h4>Author</h4>
-      <p>{{ author.name }}</p>
-      <p>{{ author.bio }}</p>
+  <div class="w-100 py-5">
+    <div class="d-flex justify-content-end">
+      <NuxtLink class="nuxt-link" :to="`/blog/author/${author.name}`">
+        <div class="d-flex align-items-center">
+          <img class="author-img rounded-circle" :src="author.image" alt="..." />
+          <div class="author-link">
+            <div>Author</div>
+            <div>{{ author.name }}</div>
+            <div class="author-page">{{ author.bio }}</div>
+          </div>
+        </div>
+      </NuxtLink>
     </div>
-    <NuxtLink :to="`/blog/author/${author.name}`">
-      <img :src="author.img" />
-      <div>
-        <h4>Author</h4>
-        <p>{{ author.name }}</p>
-        <p>{{ author.bio }}</p>
-      </div>
-    </NuxtLink>
   </div>
 </template>
 
@@ -27,3 +25,28 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+
+.nuxt-link {
+  text-decoration-color: #272727;
+}
+
+.author-link {
+  font-size: 1.5rem !important;
+  padding-left: 30px;
+  color: #272727;
+}
+
+.author-page {
+  font-size: 1rem !important;
+}
+
+.author-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #272727;
+}
+
+</style>

@@ -7,7 +7,7 @@ reading: 6
 author:
   name: David
   bio: Exploring the fusion of art and technology
-  image: https://images.unsplash.com/.....
+  image: https://firebasestorage.googleapis.com/v0/b/blog-nuxt-6a9bc.appspot.com/o/person.png?alt=media&token=4dd78dad-9ac4-4310-91f1-da0cd772c29c
 tags:
   - tag_1
   - tag_2
