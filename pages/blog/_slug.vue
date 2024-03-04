@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container-sm">
     <article>
       <div class="row d-flex mt-5">
         <div class="col">
@@ -35,17 +35,29 @@
         </div>
       </div>
 
-      <h1>{{ article.title }}</h1>
-      <p>{{ article.description }}</p>
-      <img
-        :src="require(`~/static/articles/${article.img}`)"
-        :alt="article.alt"
-      />
-      <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
+      <div class="article-title">{{ article.title }}</div>
+      <div class="meta-data mt-4">
+        <div class="d-flex">
+          <div style="margin-right: 30px;">
+            {{ formatDate(article.createdAt) }}
+          </div>
+          <div>
+            <div>
+              Reading time: {{ article.reading }} min
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="article-main-img mt-5">
+        <img
+          :src="require(`~/static/articles/${article.img}`)"
+          :alt="article.alt"
+        />
+      </div>
 
       <nuxt-content :document="article" />
 
-      <AuthorComponent :author="article.author" />
+      <AuthorComponent class="mt-5" :author="article.author" />
 
       <PrevNext :prev="prev" :next="next" />
     </article>
@@ -80,6 +92,56 @@ export default {
 </script>
 
 <style>
+
+.nuxt-content ul {
+  color: #272727;
+}
+
+.nuxt-content li {
+  font-size: 1.3rem !important;
+  color: #272727 !important;
+}
+
+.nuxt-content h2 {
+  margin-top: 70px !important;
+  font-weight: bold;
+  font-size: 2.2rem !important;
+  color: #272727 !important;
+}
+.nuxt-content h3 {
+  margin-top: 50px !important;
+  font-weight: bold;
+  font-size: 2rem !important;
+  color: #272727 !important;
+}
+.nuxt-content p {
+  margin-top: 50px !important;
+  color: #272727 !important;
+  font-size: 1.3rem !important;
+}
+
+.article-main-img {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.article-main-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.meta-data {
+  color: #4f4f4f;
+  font-size: 0.9rem;
+}
+
+.article-title {
+  font-weight: 600;
+  font-size: 3.5rem;
+  color: #272727;
+}
 
 .breadcrumb-link {
   color: #7f7f7f;
