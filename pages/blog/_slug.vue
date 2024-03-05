@@ -1,17 +1,17 @@
 <template>
   <div class="container-sm">
     <article>
-      <div class="row d-flex mt-5">
+      <div class="row d-flex flex-column flex-md-row mt-md-5">
         <div class="col">
           <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a class="breadcrumb-link" href="/">Home</a></li>
-            <li class="breadcrumb-item"><a class="breadcrumb-link" href="/blog">Blog</a></li>
-            <li class="breadcrumb-item active" aria-current="page">{{ article.title }}</li>
-          </ol>
-        </nav>
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a class="breadcrumb-link" href="/">Home</a></li>
+              <li class="breadcrumb-item"><a class="breadcrumb-link" href="/blog">Blog</a></li>
+              <li class="breadcrumb-item active" aria-current="page">{{ article.title }}</li>
+            </ol>
+          </nav>
         </div>
-        <div class="col d-flex justify-content-end">
+        <div class="col d-flex justify-content-md-end mt-3 mt-md-0">
           <a class="sections-link" href="#" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Article sections</a>
         </div>
       </div>
@@ -98,26 +98,26 @@ export default {
 }
 
 .nuxt-content li {
-  font-size: 1.3rem !important;
-  color: #272727 !important;
+  font-size: 1.3rem;
+  color: #272727;
 }
 
 .nuxt-content h2 {
-  margin-top: 70px !important;
+  margin-top: 70px;
   font-weight: bold;
-  font-size: 2.2rem !important;
-  color: #272727 !important;
+  font-size: 2.2rem;
+  color: #272727;
 }
 .nuxt-content h3 {
-  margin-top: 50px !important;
+  margin-top: 50px;
   font-weight: bold;
-  font-size: 2rem !important;
-  color: #272727 !important;
+  font-size: 2rem;
+  color: #272727;
 }
 .nuxt-content p {
-  margin-top: 50px !important;
-  color: #272727 !important;
-  font-size: 1.3rem !important;
+  margin-top: 50px;
+  color: #272727;
+  font-size: 1.3rem;
 }
 
 .article-main-img {
@@ -186,17 +186,31 @@ export default {
   text-decoration: none;
 }
 
-.nuxt-content h2 {
-  font-weight: bold;
-  font-size: 28px;
+@media only screen and (max-width: 600px) {
+  .article-title {
+    font-size: 2rem;
+    margin-top: 50px;
+  }
+
+  .nuxt-content li {
+    font-size: 1.2rem;
+  }
+
+  .nuxt-content h2 {
+    margin-top: 40px;
+    font-weight: bold;
+    font-size: 1.7rem;
+    color: #272727;
+  }
+  .nuxt-content h3 {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .nuxt-content p {
+    margin-top: 30px;
+    font-size: 1.2rem;
+  }
 }
 
-.nuxt-content h3 {
-  font-weight: bold;
-  font-size: 22px;
-}
-
-.nuxt-content p {
-  margin-bottom: 20px;
-}
 </style>
