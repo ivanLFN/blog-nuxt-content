@@ -7,7 +7,7 @@
           <div class="author-link">
             <div>Author</div>
             <div>{{ author.name }}</div>
-            <div class="author-page">{{ author.bio }}</div>
+            <div class="author-page">More about author</div>
           </div>
         </div>
       </NuxtLink>
